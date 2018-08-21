@@ -1,0 +1,159 @@
+<div class="container">
+	<div class="jumbotron text-center">
+		<h1>Finding Paradise Worship</h1>
+	</div>
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			Upcoming Events
+		</div>
+		<hr>
+		<!--div class="panel-body"-->
+		<table class="table table-striped table-hover active">
+			<tr class="table-gray">
+				<th>Event</th>
+				<th>Location</th>
+				<th class="text-right">Date</th>
+			</tr>
+			<tr>
+				<td>SoBe Jesus</td>
+				<td><a href="http://www.stpatrickmiamibeach.com/" class="text-center" target="_blank">Saint Patrick's Catholic Church</a></td>
+				<td class="text-right">7/13</td>
+			</tr>
+			<tr>
+				<td>5NF</td>
+				<td><a href="http://stlcatholic.org/" class="text-center" target="_blank">Saint Louis Catholic Church</a></td>
+				<td class="text-right">7/31</td>
+			</tr>
+			<tr>
+				<td>5NF</td>
+				<td><a href="http://stlcatholic.org/" class="text-center" target="_blank">Saint Louis Catholic Church</a></td>
+				<td class="text-right">8/1</td>
+			</tr>
+
+		</table>
+			
+
+</div>
+<div class="container">	
+	About the Members
+	<hr>
+	<div class="row">
+		<style>
+				.band-section{
+					overflow: hidden;
+					text-align: center;
+					padding: 20px;
+					padding-right: 20px;
+					
+				}
+				img{
+					height: 200px;
+					width: 200px;
+					filter:grayscale(100%);
+					transition: .6s all;
+
+				}
+				img:hover{
+					filter:none;
+					transform:scale(1.10);
+				}
+		</style>
+		<div class="band-section col-sm-4">
+			<img src="Daniel Headshot.png" class="rounded-circle">
+			<h5 style="padding: 15px">Daniel Rothwell</h5>
+			<p style="color: gray">Singer/Acoustic Guitarist</p>
+		</div>
+		<br>	
+		<div class="band-section col-sm-4">
+			<img src="James Headshot.png" class="rounded-circle">
+			<h5 style="padding: 15px">James Dugard</h5>
+			<p style="color: gray">Singer/Electric Guitarist</p>
+		</div>
+		<br>
+		<div class="band-section col-sm-4">
+			<img src="Andrew Headshot.png" class="rounded-circle">
+			<h5 style="padding: 15px">Andrew Castillo</h5>
+			<p style="color: gray">Singer/Drummer</p>
+		</div>
+		<br>
+		<div class="band-section col-sm-6">
+			<img src="Peter Headshot.png" class="rounded-circle">
+			<h5 style="padding: 15px">Peter Kaldahl</h5>
+			<p style="color: gray">Singer</p>
+
+		</div>
+		<br>
+		<div class="band-section col-sm-6">
+				<img src="Mr.Electric.png" class="rounded-circle">
+				<h5 style="padding: 15px">Mr. Electric</h5>
+				<p style="color: gray">Andrew's Doppelganger</p>
+		</div>
+		<br>
+	</div>
+</div>
+<!--div style="text-align:center">
+	<h1 class="well">
+	  Submit Feedback
+	</h1>
+	  <div class="container">
+		  <div class="col-md-5">
+			  <div class="form-area"> 
+				  <form role="form">
+					  <br style="clear:both">
+					  <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+					  <div class="form-group">
+									  <input type="text" class="form-control" id="name" name="name" placeholder="Name" [(ngModel)]="name" required>
+					  </div>
+					  <div class="form-group">
+									  <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="email" required>
+					  </div>
+					  <div class="form-group">
+									  <input type="phone" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" [(ngModel)]="mobile" required>
+					  </div>
+					  <div class="form-group">
+									  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" [(ngModel)]="subject" required>
+					  </div>
+					  <div class="form-group">
+									  <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" [(ngModel)]="message" maxlength="140" rows="7"></textarea>              
+					  </div>
+					  <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" (click)="save(name, email, mobile, subject, message)">Submit Form</button>
+				  </form>
+			  </div>
+		  </div>
+	  </div>
+  </div-->
+<div class="container">
+	Contact Us
+	<hr>
+	<form ng-submit="submit(contactform)" name="contactform" method="post">
+		<div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+			<input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Full Name" required>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+			<input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEamil" name="inputEmail" placeholder="Email" required>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+			<input ng-model="formData.inputSubject" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject" required>
+		</div>
+		<div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+			<textarea ng-model="formData.inputMessage" class="form-control" rows="8" id="inputMessage" name="inputMessage" placeholder="Message" required></textarea>
+		</div>
+		<style>
+		.btn-primary{
+			color:black;
+			background-color: #fff;
+			border-radius: 24px; 
+		}
+		.btn-primary:hover{
+			color: #fff;
+			background-color: #18d7f0;
+		}
+		</style>
+		<button type="submit" class="btn btn-primary">Submit</button>
+		
+		
+	</form>
+	<p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+	
+</div>
